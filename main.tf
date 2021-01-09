@@ -14,7 +14,11 @@
 #}
 
 # Provider Block
-
+terraform {
+  backend "local" {
+    path = "/root/terraform.tfstate"
+  }
+}
 provider "azurerm" {
     version         =   ">= 2.26"
     client_id       =   var.client_id
