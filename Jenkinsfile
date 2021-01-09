@@ -25,7 +25,7 @@ pipeline{
                         sh """
                                 
                         echo "Initialising Terraform"
-                        terraform init -backend-config="access_key=$ARM_ACCESS_KEY"
+                        /root/.jenkins/tools/org.jenkinsci.plugins.terraform.TerraformInstallation/terraform/terraform init -backend-config="access_key=$ARM_ACCESS_KEY"
                         """
                            }
                     }
