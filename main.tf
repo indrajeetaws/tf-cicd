@@ -25,6 +25,11 @@ provider "azurerm" {
     client_secret   =   var.client_secret
     subscription_id =   var.subscription_id
     tenant_id       =   var.tenant_id
+      features {
+        virtual_machine {
+            delete_os_disk_on_deletion = true
+        }
+    }
 }
 resource "azurerm_resource_group" "example" {
   name     = "example-resources"
