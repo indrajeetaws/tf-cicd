@@ -4,7 +4,7 @@ pipeline{
         "org.jenkinsci.plugins.terraform.TerraformInstallation" "terraform13"
     }
     environment {
-        TF_HOME = tool('terraform')
+        TF_HOME = tool('terraform13')
         TF_IN_AUTOMATION = "true"
         PATH = "$TF_HOME:$PATH"
     }
