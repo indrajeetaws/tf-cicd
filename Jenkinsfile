@@ -46,7 +46,7 @@ pipeline{
                         
                         sh """
                                 
-                        /root/.jenkins/tools/org.jenkinsci.plugins.terraform.TerraformInstallation/terraform/terraform validate
+                        terraform13 validate
                         """
                            }
                     }
