@@ -45,7 +45,7 @@ pipeline{
                 ), string(credentialsId: 'access_key', variable: 'ARM_ACCESS_KEY')]) {
                         
                         sh """
-                                
+                        echo "validate Terraform" 
                         terraform13 validate
                         """
                            }
