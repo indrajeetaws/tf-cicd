@@ -1,7 +1,7 @@
 pipeline{
     agent any 
     tools {
-        "org.jenkinsci.plugins.terraform.TerraformInstallation" "terraform"
+        "org.jenkinsci.plugins.terraform.TerraformInstallation" "terraform13"
     }
     environment {
         TF_HOME = tool('terraform')
@@ -25,7 +25,7 @@ pipeline{
                         sh """
                                 
                         echo "Initialising Terraform"
-                        terraform init -backend-config="access_key=$ARM_ACCESS_KEY"
+                        terraform13 init -backend-config="access_key=$ARM_ACCESS_KEY"
                         """
                            }
                     }
