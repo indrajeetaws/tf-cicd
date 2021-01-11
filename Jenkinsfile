@@ -25,7 +25,7 @@ pipeline{
                         sh """
                                 
                         echo "Initialising Terraform"
-                        /root/.jenkins/tools/org.jenkinsci.plugins.terraform.TerraformInstallation/terraform/terraform init 
+                        terraform init 
                         """
                            }
                     }
